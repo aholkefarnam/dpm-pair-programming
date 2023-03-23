@@ -7,13 +7,13 @@ friends_dict = [
 ]
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route('/', methods=["GET", "POST"])
 def index():
     return render_template(
         "index.html", pageTitle="Web form template", friends=friends_dict
     )
 
-@app.route("/about", methods=["POST"])
+@app.route('/about', methods=["POST"])
 def about():
     return render_template(
         "about.html", pageTitle="About", friends=friends_dict
@@ -21,7 +21,7 @@ def about():
 
 
 
-@app.route("/add", methods=["POST"])
+@app.route('/add', methods=["POST"])
 def add():
     print("inside add function")
     if request.method == "POST":
