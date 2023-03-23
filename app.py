@@ -13,7 +13,7 @@ def index():
         "index.html", pageTitle="Web form template", friends=friends_dict
     )
 
-@app.route('/about', methods=["POST"])
+@app.route('/about', methods=["GET","POST"])
 def about():
     return render_template(
         "about.html", pageTitle="About", friends=friends_dict
@@ -21,7 +21,7 @@ def about():
 
 
 
-@app.route('/add', methods=["POST"])
+@app.route('/add', methods=["GET", "POST"])
 def add():
     print("inside add function")
     if request.method == "POST":
@@ -54,7 +54,7 @@ def add():
         print(friends_dict)
         return redirect(url_for("index"))
     else:
-        return redirect(url_for("index"))
+        return redirect(url_for("about"))
 
 
 if __name__ == "__main__":
