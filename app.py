@@ -28,23 +28,29 @@ def add():
 
         form = request.form
 
-        fname = form["fname"]
-        flavor = form["flavor"]
-        read = form["read"]
-        activities = form.getlist("activities")  # this is a PYthon list
+        title = form["title"]
+        author = form["author"]
+        pages = form["pages"]
+        type = form["type"]
+        details = form.getlist("details")  # this is a PYthon list
+        acquire = form["acquire"]
 
-        print(fname)
-        print(flavor)
-        print(read)
-        print(activities)
+        print(title)
+        print(author)
+        print(pages)
+        print(type)
+        print(details)
+        print(acquire)
 
-        activities_string = ", ".join(activities)  # make the Python list into a string
+        details_string = ", ".join(details)  # make the Python list into a string
 
         friend_dict = {
-            "name": fname,
-            "flavor": flavor,
-            "read": read,
-            "activities": activities_string,
+            "title": title,
+            "author": author,
+            "pages": pages,
+            "type": type,
+            "details": details_string,
+            "acquire": acquire
         }
 
         print(friend_dict)
@@ -54,7 +60,7 @@ def add():
         print(friends_dict)
         return redirect(url_for("index"))
     else:
-        return redirect(url_for("about"))
+        return redirect(url_for("index"))
 
 
 if __name__ == "__main__":
