@@ -3,7 +3,12 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 friends_dict = [
-    {"name": "Test", "flavor": "swirl", "read": "yes", "activities": "reading"}
+    {"title": "The Hobbit", 
+     "author": "J. R. R. Tolkien", 
+     "pages": "310", 
+     "type": "nonfiction",
+     "details": "own",
+     "acquire": "purchase"}
 ]
 
 
