@@ -14,16 +14,16 @@
     <title>{{ pageTitle }}</title>
   </head>
   <nav>
-    <h2>
-      Navigation
-      <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </h2>
+    <ul>
+      <li><a href="/">Index</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
   </nav>
 
   <body>
-    <div class="container">{% block body %}xx {% endblock %}</div>
+    <div class="container">
+      {% block body %}
+      {% endblock %}
+    </div>
    </body>
 </html>
