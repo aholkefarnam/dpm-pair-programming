@@ -8,7 +8,7 @@ I completed this project as part of Digital Product Management class. To learn a
 
 ---  
 
-![Library application homepage](library.jpg "Library homepage")
+![Library application homepage](library.png "Library homepage")
 
 
 
